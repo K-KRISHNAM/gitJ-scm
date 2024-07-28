@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('stage1-Hello') {
             steps {
+                git branch: 'main', credentialsId: 'ffa1bc18-7302-40c0-9f54-2c3b1178afec', url: 'https://github.com/K-KRISHNAM/gitJ-scm.git'
                 echo 'Hello World'
+                sh "ls -la"
             }
         }
         
